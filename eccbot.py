@@ -9,7 +9,7 @@ from twisted.internet import reactor, protocol, ssl
 def log_it(user, msg):
     today = datetime.date.today().isoformat()
     now = time.strftime('[%H:%M:%S]', time.localtime())
-    logfile = 'log/%s.log' % today
+    logfile = 'log/%s.txt' % today
     with open(logfile, 'a') as f:
         message = '%s <%s> %s\n' % (now, user, msg)
         f.write(message)
